@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="imperial_converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="avl-ry-knf">
+                                <rect key="frame" x="50" y="124" width="924" height="125"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="60" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jfj-hj-jD4">
+                                        <rect key="frame" x="0.0" y="0.0" width="924" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="wmD-0z-cLg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gtd-Xb-ZIe">
+                                        <rect key="frame" x="0.0" y="75" width="924" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Daf-z1-sRe"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Mile"/>
+                                            <segment title="Kilometer"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="controlAChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="8Do-cU-M6l"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="FOK-LA-cFT">
+                                <rect key="frame" x="50" y="299" width="924" height="125"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="60" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oR1-U6-e51">
+                                        <rect key="frame" x="0.0" y="0.0" width="924" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="DZk-c8-O6B"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8Ne-lG-m0z">
+                                        <rect key="frame" x="0.0" y="75" width="924" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GRb-eT-8UG"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Mile"/>
+                                            <segment title="Kilometer"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="controlBChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="3jk-Ea-MDp"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeK-Ko-c5B">
+                                <rect key="frame" x="50" y="474" width="924" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="L8L-ES-CLY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Oee-Hs-a5H"/>
+                                    <constraint firstAttribute="height" constant="50" id="qv0-F9-eHc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WrB-97-EVA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="avl-ry-knf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="1VY-1F-jnr"/>
+                            <constraint firstItem="avl-ry-knf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="DaW-01-RTW"/>
+                            <constraint firstItem="QeK-Ko-c5B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="KHg-gD-OwZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="avl-ry-knf" secondAttribute="trailing" constant="50" id="R61-s8-4xP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QeK-Ko-c5B" secondAttribute="trailing" constant="50" id="Sl0-Bw-XBH"/>
+                            <constraint firstItem="QeK-Ko-c5B" firstAttribute="top" secondItem="FOK-LA-cFT" secondAttribute="bottom" constant="50" id="g10-zX-plN"/>
+                            <constraint firstItem="FOK-LA-cFT" firstAttribute="top" secondItem="avl-ry-knf" secondAttribute="bottom" constant="50" id="jFf-LE-mC2"/>
+                            <constraint firstItem="FOK-LA-cFT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="pes-02-NRR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FOK-LA-cFT" secondAttribute="trailing" constant="50" id="uuw-Kq-W2C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="controlA" destination="gtd-Xb-ZIe" id="LL2-qQ-ZQK"/>
+                        <outlet property="controlB" destination="8Ne-lG-m0z" id="Rjh-ut-xA1"/>
+                        <outlet property="inputA" destination="Jfj-hj-jD4" id="Afv-2u-kRl"/>
+                        <outlet property="inputB" destination="oR1-U6-e51" id="Bbi-X5-bLg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="-27.717391304347828"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
